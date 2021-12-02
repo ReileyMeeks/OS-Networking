@@ -46,28 +46,6 @@ int main(int argc, char *argv[])
    sockme.sin_addr.s_addr = INADDR_ANY;
    sockme.sin_port = htons(portnum);
    
-   int c1 = getchar();
-int c2 = getchar();
-int val = (10 * (c1 - '0')) + (c2 - '0');
-printf("%d\n", val);
-
-int num = 12;
-int d1 = (num / 10) + '0';
-int d2 = (num % 10) + '0';
-printf("%c%c\n", d1, d2);
-
-
-   
-   
-   if (process_id != 0)
-{
-   cout << "Part 3: Working With External Commands" << endl;
-   char * args[3] = {(char * )"ls", (char * )"-l", NULL};
-   
-   replaceProcess(args);
-   
-   cout << endl;
-}
 
    s = socket(PF_INET, SOCK_STREAM, 0);
    result = bind(s, (struct sockaddr *) &sockme, sizeof(sockme));
